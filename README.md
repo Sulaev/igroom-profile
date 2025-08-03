@@ -17,6 +17,10 @@ cd igroom-profile-test
 2. Запустите приложение одной командой:
 ```
 docker-compose up --build
+
+или 
+
+docker compose up --build /// Docker Desktop
 ```
 3. Откройте в браузере:  
    [http://localhost:3000/profile](http://localhost:3000/profile)
