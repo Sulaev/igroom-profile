@@ -7,7 +7,7 @@ export default async function ProfilePage() {
   const profile = await getProfile();
 
   return (
-      <div className="min-h-screen flex flex-col items-center justify-center py-8">
+      <div className="min-h-screen flex flex-col items-center justify-center">
         <Header />
         <ProfileCard profile={profile} />
         <Footer />

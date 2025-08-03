@@ -4,9 +4,8 @@ import React from "react";
 
 export function Footer() {
   return (
-    <nav className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-[800px] max-w-[96vw] rounded bg-[#EDEDED] flex items-center justify-between px-8 py-3 shadow"
+    <nav className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-[390px] rounded bg-[#EDEDED] flex items-center justify-between px-8 shadow"
       style={{ minWidth: 320 }}>
-      {/* Домик — активный */}
       <button className="outline-none">
         <span className="block w-10 h-10 flex items-center justify-center">
           <svg width="38" height="38" fill="none">
@@ -15,7 +14,7 @@ export function Footer() {
           </svg>
         </span>
       </button>
-      {/* Чат */}
+          
       <button className="outline-none">
         <span className="block w-10 h-10 flex items-center justify-center">
           <svg width="38" height="38" fill="none">
@@ -25,7 +24,7 @@ export function Footer() {
           </svg>
         </span>
       </button>
-      {/* Глобус */}
+
       <button className="outline-none">
         <span className="block w-10 h-10 flex items-center justify-center">
           <svg width="38" height="38" fill="none">
@@ -35,7 +34,7 @@ export function Footer() {
           </svg>
         </span>
       </button>
-      {/* Колокольчик */}
+
       <button className="outline-none">
         <span className="block w-10 h-10 flex items-center justify-center">
           <svg width="38" height="38" fill="none">
@@ -45,9 +44,9 @@ export function Footer() {
           </svg>
         </span>
       </button>
-      {/* Профиль */}
+
       <button className="outline-none">
-        <span className="block w-10 h-10 flex items-center justify-center">
+        <span className="block w-10 h-10 items-center justify-center">
           <svg width="38" height="38" fill="none">
             <ellipse cx="19" cy="19" rx="14" ry="13" fill="#BDBDBD"/>
             <circle cx="19" cy="16" r="4" fill="#fff"/>
