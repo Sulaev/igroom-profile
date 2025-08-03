@@ -13,10 +13,10 @@ export function Avatar({ src, alt }: Props) {
     <img
       src={imgSrc}
       alt={alt}
-      className="w-24 h-24 rounded-full object-cover"
+      className="w-[180px] h-[180px] rounded-full object-cover"
       onError={() =>
         setImgSrc(
-          "https://api.dicebear.com/7.x/personas/svg?seed=profile"
+          "/avatarPlaceholder.png"
         )
       }
     />

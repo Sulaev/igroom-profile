@@ -3,6 +3,7 @@
 import { Profile } from "./types";
 import { Avatar } from "./Avatar";
 import { formatLastSeen } from "@/shared/lib/dateUtils";
+import { DurationStyled } from "@/shared/lib/formatDurationInApp";
 
 export function ProfileCard({ profile }: { profile: Profile }) {
   return (
@@ -20,41 +21,39 @@ export function ProfileCard({ profile }: { profile: Profile }) {
           <div className="w-[180px] h-[180px] bg-[#FFF457] rounded-full flex items-center justify-center shadow-lg">
             <Avatar src={profile.avatar_url} alt={profile.name} />
           </div>
-          <span className="absolute -top-2 -left-1 bg-green-500 w-8 h-8 rounded-full flex items-center justify-center border-2 border-white font-bold text-white text-base shadow-md">
+          <span className="absolute -top-2 -left-1 bg-green-500 w-8 h-8 rounded-full flex items-center justify-center font-bold text-black text-base shadow-md">
             P
           </span>
         </div>
 
         <div className="absolute right-0 top-2 flex flex-col gap-7 items-center pl-7 pr-6 select-none">
-          <button className="flex flex-col items-center opacity-50">
+          <button className="flex flex-col items-center">
             <img src="/icon/share.svg" alt="Поделиться" width={27} height={41} />
           </button>
-          <button className="flex flex-col items-center opacity-50">
+          <button className="flex flex-col items-center">
             <img src="/icon/eye.svg" alt="Это я" width={36} height={21} />
             <span className="text-[12px] text-[#A9A9A9]">Это я</span>
           </button>
-          <button className="flex flex-col items-center opacity-50">
+          <button className="flex flex-col items-center">
             <img src="/icon/cat.svg" alt="Котум" width={30} height={30} />
             <span className="text-[12px] text-[#A9A9A9]">Котум</span>
           </button>
         </div>
       </div>
 
-
       <div className="flex flex-col w-full py-5">
         <div className="w-full text-center text-[22px] text-black leading-none mt-1 mb-1 break-words font-normal">
           румер: <span className="font-bold">{profile.name}</span>
         </div>
         <div className="flex flex-row items-center justify-between w-full px-17">
-          <span className="text-[17px] text-[#838383]">@{profile.nickname}</span>
-          <span className="text-[17px] text-[#838383]">{formatLastSeen(profile.last_login_at)}</span>
+          <span className="text-[17px] text-[#434343]">@{profile.nickname}</span>
+          <span className="text-[17px] text-[#434343]">{formatLastSeen(profile.last_login_at)}</span>
         </div>
       </div>
 
       <div className="flex justify-center items-center w-full px-7 mt-1 mb-1 text-[24px] text-[#434343]">
         <div className="flex flex-col items-center min-w-[110px]">
-          <span className="font-bold leading-tight">1 месяц</span>
-          <span className="text-base text-[#434343] font-normal mt-[-2px]">в игруме</span>
+          <DurationStyled isoDate={profile.created_at} />
         </div>
 
         <div className="h-12 w-px bg-[#434343] mx-3 opacity-60" />
