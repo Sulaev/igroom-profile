@@ -5,7 +5,7 @@ import { Avatar } from "./Avatar";
 
 export function ProfileCard({ profile }: { profile: Profile }) {
   return (
-    <div className="w-[390px] mx-auto bg-[#F5F5F5] flex flex-col items-center relative overflow-hidden pb-30">
+    <div className="w-[390px] mx-auto bg-[#F5F5F5] flex flex-col items-center relative overflow-hidden pb-20 pt-20">
       
       <div className="relative w-full flex items-start pt-12" style={{ minHeight: 180 }}>
         <button
