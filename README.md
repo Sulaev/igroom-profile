@@ -11,8 +11,8 @@
 
 1. Клонируйте репозиторий:
 ```
-git clone [https://github.com/your-username/igroom-profile-test.git](https://github.com/Sulaev/igroom-profile.git)
-cd igroom-profile-test
+git clone https://github.com/Sulaev/igroom-profile.git
+cd igroom-profile
 ```
 2. Запустите приложение одной командой:
 
