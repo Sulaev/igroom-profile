@@ -1,7 +1,7 @@
 export const mockProfile = {
   id: "5e800be0-088e-41cb-b549-10ebf4a13591",
   role: "roomer",
-  name: "Полный Тестовый Пользователь",
+  name: "Полный Тестовый Пользователь MOCK",
   nickname: "user6",
   avatar_url: "https://example.com/avatar_publicuser.png",
   age: 32,
