@@ -2,6 +2,7 @@
 
 import { Profile } from "./types";
 import { Avatar } from "./Avatar";
+import { formatLastSeen } from "@/shared/lib/dateUtils";
 
 export function ProfileCard({ profile }: { profile: Profile }) {
   return (
@@ -46,7 +47,7 @@ export function ProfileCard({ profile }: { profile: Profile }) {
         </div>
         <div className="flex flex-row items-center justify-between w-full px-17">
           <span className="text-[17px] text-[#838383]">@{profile.nickname}</span>
-          <span className="text-[17px] text-[#838383]">Вчера 18.00</span>
+          <span className="text-[17px] text-[#838383]">{formatLastSeen(profile.last_login_at)}</span>
         </div>
       </div>
 
@@ -90,7 +91,7 @@ export function ProfileCard({ profile }: { profile: Profile }) {
           </div>
           <div className="flex items-center gap-3">
             <span className="w-7 h-7 rounded-full bg-[#D1D1D1] flex items-center justify-center text-[22px] text-[#434343] font-bold">
-              2
+              {profile.calling_limit}
             </span>
             <img src="/icon/chevronDown.svg" alt="Котум" width={31} height={18} />
           </div>
@@ -106,7 +107,7 @@ export function ProfileCard({ profile }: { profile: Profile }) {
 
           <div className="flex items-center gap-3">
             <span className="w-7 h-7 rounded-full bg-[#D1D1D1] flex items-center justify-center text-[22px] text-[#434343] font-bold">
-              3
+              {profile.going_limit}
             </span>
             <img src="/icon/chevronDown.svg" alt="Котум" width={31} height={18} />
           </div>
@@ -173,7 +174,7 @@ export function ProfileCard({ profile }: { profile: Profile }) {
 
         <div className="bg-white rounded-[25px] px-4 py-3 shadow-sm flex flex-col gap-1 relative">
           <div className="text-black text-[17px] font-normal leading-snug pr-10 line-clamp-4">
-            Я профессиональный скуф, обажаю сидеть дома и часто играю в Мафию с друзьями по вечерам в Сицилии и зовем всех желающих и разные другие дела...
+            {profile.about}  
           </div>
 
           <img
@@ -188,7 +189,7 @@ export function ProfileCard({ profile }: { profile: Profile }) {
 
           <div className="flex justify-between items-center mt-1">
             <span className="text-black text-[17px]">Мой телеграм</span>
-            <span className="text-black text-[17px] font-bold">@ribakit3</span>
+            <span className="text-black text-[17px] font-bold">@{profile.telegram}</span>
           </div>
         </div>
 
